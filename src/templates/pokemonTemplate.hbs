@@ -1,0 +1,11 @@
+<article class=card{{name}}>
+<img src={{sprites.front_default}}>
+<img src={{sprites.back_default}}>    
+<h2>{{name}}</h2>
+<ul>
+    {{#each moves}}
+    <li>{{this.move.name}}</li>
+    {{/each}}
+</ul>
+<p>{{weight}} kg</p>
+</article>
