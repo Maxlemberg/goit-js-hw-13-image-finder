@@ -48,19 +48,6 @@ module.exports = (env) =>
             test: /\.hbs$/,
             use: ["handlebars-loader"],
           },
-          /////// шрифти
-          {
-            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            use: [
-              {
-                loader: "file-loader",
-                options: {
-                  name: "[name].[ext]",
-                  outputPath: "fonts/",
-                },
-              },
-            ],
-          },
         ],
         // плагины применяются к результирующему бандлу
       },

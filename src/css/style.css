@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light&display=swap");
+
 
 input {
   width: 500px;
@@ -18,10 +19,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.input-container {
-  margin-top: 50px;
-}
-
 .title {
   margin: 0;
   color: blueviolet;
@@ -29,12 +26,79 @@ body {
   font-size: 100px;
   text-transform: uppercase;
   text-shadow: 2px 2px 2px;
-  transform: scale(0);
-  transition: transform 1000ms ease 1000ms; 
-  font-family: 'Shadows Into Light';
-  }
+  font-family: "Shadows Into Light";
+  animation: bounce 1s;
+}
 
 .js-title {
-  transform: scale(1.15);
-  transition: transform 1000ms linear 500ms;  
+  transform: scale(0.8);
+  transition: transform 1000ms ease 500ms;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.photo-card {
+  width: 100%;
+  height: 100%;
+  transition: box-shadow 500ms linear, transform 500ms linear;
+}
+
+.photo-card:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 4px rgb(24, 22, 19);
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+li {
+  list-style: none;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.is-hiden {
+  opacity: 0;
+}
+
+.btn {
+  width: 120px;
+  height: 30px;
+  background-color: blueviolet;
+  color: white;
+  box-shadow: 2px 2px 2px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  transition: transform 500ms linear;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }

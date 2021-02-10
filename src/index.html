@@ -8,11 +8,24 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Material+Icons"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="input-container">
       <h1 class="title">Search by Name</h1>
-      <input type="text" placeholder="Шукати картинку" />
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+      </form>
+      <ul class="gallery"></ul>
+      <button type="button" class="btn is-hiden">Load more</button>
     </div>
   </body>
 </html>
